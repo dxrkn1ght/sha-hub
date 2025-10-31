@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom small polish */
+:root{ --card-bg: rgba(255,255,255,0.9); }
+.container { max-width: 1200px; }
+
+/* subtle float animation for cards */
+@keyframes floaty { 0%{ transform: translateY(0);} 50%{ transform: translateY(-4px);} 100%{ transform: translateY(0);} }
+.card-float { animation: floaty 6s ease-in-out infinite; }
+
+
+/* Apple-like polish additions */
+:root{ --primary-start: #2dd4bf; --primary-end: #3b82f6; --muted: #6b7280; }
+.button-primary{ background: linear-gradient(90deg,var(--primary-start),var(--primary-end)); color: white; padding: 0.6rem 1rem; border-radius: 12px; box-shadow: 0 6px 18px rgba(59,130,246,0.12); }
+.input { border: 1px solid rgba(15,23,42,0.06); padding: 0.6rem; border-radius: 10px; }
+.card { background: rgba(255,255,255,0.95); border-radius: 16px; padding: 1rem; box-shadow: 0 10px 30px rgba(2,6,23,0.08); }
+.small-muted { color: var(--muted); font-size: 0.9rem; }
+
+@keyframes floaty { 0%{ transform: translateY(0);} 50%{ transform: translateY(-4px);} 100%{ transform: translateY(0);} }
+.card-float { animation: floaty 6s ease-in-out infinite; }

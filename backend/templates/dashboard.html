@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="text-2xl font-bold mb-4">SH.A. Dashboard</h1>
+<div class="grid grid-cols-3 gap-4">
+  <div class="p-4 bg-white rounded-lg shadow">Total students: {{ total_students }}</div>
+  <div class="p-4 bg-white rounded-lg shadow">Unpaid: {{ unpaid_count }}</div>
+  <div class="p-4 bg-white rounded-lg shadow">Active groups: {{ groups_count }}</div>
+</div>
+{% endblock %}
