@@ -1,4 +1,4 @@
-FROM node:20-slim AS build
+FROM node:18-slim as build
 WORKDIR /app
 
 ENV ESBUILD_BINARY_PATH=/usr/local/bin/esbuild
