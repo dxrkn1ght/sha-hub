@@ -1,10 +1,15 @@
-FROM node:20-alpine AS build
+FROM python:3.11-slim
+
 WORKDIR /app
 
-COPY package*.json ./
-RUN npm install --legacy-peer-deps
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
-RUN npm run build
 
-CMD ["npm","run","start"]
+EXPOSE 8000
+
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

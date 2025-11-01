@@ -1,4 +1,4 @@
-import 'tailwindcss/tailwind.css'
+import './tailwind.css'
 import './styles.css'
 import Alpine from 'alpinejs'
 import { login, logout, getAccess } from './api.js'
